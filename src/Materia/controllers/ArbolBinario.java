@@ -46,16 +46,8 @@ public class ArbolBinario {
     }
 
     private boolean buscarRec(Node padre, int value){
-        if (padre == null){
-            return false;
-        }
-
-        if (value < padre.getValue()){
-            // Me voy a la izquierda
-            padre.setLeft(insertRec(padre.getLeft(), value));
-        } else if (value > padre.getValue()){
-            // Me voy a la derecha
-            padre.setRight(insertRec(padre.getRight(), value));
+        if (padre.getValue() == value){
+            System.out.println("Encontrado " + value);
         }
         return true;
     }
